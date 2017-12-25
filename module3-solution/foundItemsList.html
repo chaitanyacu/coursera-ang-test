@@ -1,7 +1,7 @@
 <div>
 <ul>
     <li ng-repeat="item in list.found">
-       {{item.id}} : <span class="menu-item-name">{{item.name}} </span>:
+       <span class="menu-item-name">{{item.short_name}} </span> : <span class="menu-item-name">{{item.name}} </span>:
        <span class="menu-item-description">{{item.description}}</span>
         <button ng-click="list.onRemove({index: $index});">Don't want this one!</button>
     </li>

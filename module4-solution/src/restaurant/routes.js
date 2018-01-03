@@ -27,8 +27,8 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     templateUrl: 'src/restaurant/templates/categories.template.html',
     controller: 'CategoriesController as categories',
     resolve: {
-      cats: ['MenuService', function (MenuService) {
-        return MenuService.getAllCategories();
+      cats: ['MenuDataService', function (MenuDataService) {
+        return MenuDataService.getAllCategories();
       }]
     }
   })
@@ -39,9 +39,9 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     templateUrl: 'src/restaurant/templates/category-detail.template.html',
     controller: 'CategoryDetailController as categoryDetail',
     resolve: {
-      catitems: ['$stateParams', 'MenuService',
-            function ($stateParams, MenuService) {
-              return MenuService.getItemsForCategory($stateParams.itemId);
+      catitems: ['$stateParams', 'MenuDataService',
+            function ($stateParams, MenuDataService) {
+              return MenuDataService.getItemsForCategory($stateParams.itemId);
             }]
     }
 

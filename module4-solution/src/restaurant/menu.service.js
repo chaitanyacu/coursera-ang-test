@@ -2,11 +2,11 @@
 'use strict';
 
 angular.module('RestaurantApp')
-.service('MenuService', MenuService);
+.service('MenuDataService', MenuDataService);
 
 
-MenuService.$inject = ['$q','ApiBasePath','$http']
-function MenuService($q,ApiBasePath,$http) {
+MenuDataService.$inject = ['$q','ApiBasePath','$http']
+function MenuDataService($q,ApiBasePath,$http) {
   var service = this;
 
   service.getAllCategories = function () {

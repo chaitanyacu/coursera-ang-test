@@ -77,10 +77,10 @@
       <div class="col-sm-10">
      <input type="text" name="shortname"
               ng-model="signup.user.shortname"
-
+              required
               >
             </div>
-              
+
               <span class="italic" ng-if="signup.invalidshortname && signupForm.shortname.$touched">
                 No such menu number exists
               </span>

@@ -1,0 +1,28 @@
+<div class="container">
+
+  <span ng-if="myinfo.isRegisteredUser">
+    First Name : {{myinfo.user.firstname}}
+    <br>
+    Last Name : {{myinfo.user.lastname}}
+    <br>
+    Email : {{myinfo.user.email}}
+    <br>
+    Phone : {{myinfo.user.phone}}
+    <br>
+    <br>
+    <br>
+    Favorite menu item:
+    <menu-item menu-item="myinfo.menuItem">
+    </menu-item>
+  </span>
+  <span ng-if="myinfo.isRegisteredUser === false">
+    Not Signed Up Yet.
+    <a ui-sref="public.signup">
+      <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs">  Sign up Now!</a>
+  </span>
+
+
+
+
+
+</div>
